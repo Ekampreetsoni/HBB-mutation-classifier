@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+# Raw and processed matrices are large and fully reproducible from src/download.py + src/preprocess.py
+data/raw/*
+!data/raw/SOURCES.md
+data/processed/*.parquet

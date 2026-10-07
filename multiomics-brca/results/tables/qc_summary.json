@@ -1,0 +1,41 @@
+{
+  "primary_tumour_patients": {
+    "rna": 1097,
+    "rppa": 742,
+    "cnv": 1080
+  },
+  "duplicate_samples_dropped": {
+    "rna": 0,
+    "rppa": 0,
+    "cnv": 0
+  },
+  "patients_with_pam50": 844,
+  "patients_in_all_layers_with_pam50": 682,
+  "features": {
+    "rna": {
+      "features_raw": 20530,
+      "dropped_missing": 0,
+      "dropped_near_constant": 301,
+      "features_kept": 20229
+    },
+    "rppa": {
+      "features_raw": 131,
+      "dropped_missing": 0,
+      "dropped_near_constant": 0,
+      "features_kept": 131
+    },
+    "cnv": {
+      "features_raw": 24776,
+      "dropped_missing": 0,
+      "dropped_near_constant": 0,
+      "features_kept": 24776
+    }
+  },
+  "class_counts": {
+    "LumA": 327,
+    "LumB": 162,
+    "Her2": 61,
+    "Basal": 116,
+    "Normal": 16
+  }
+}

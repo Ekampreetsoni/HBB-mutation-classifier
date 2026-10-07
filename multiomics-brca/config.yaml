@@ -1,0 +1,29 @@
+seed: 42
+
+data:
+  # Legacy UCSC Xena TCGA hub. tcga.xenahubs.net serves its downloads from this S3 bucket.
+  base_url: "https://tcga-xena-hub.s3.us-east-1.amazonaws.com/download"
+  cohort: "TCGA Breast Cancer (BRCA)"
+  datasets:
+    rna: "TCGA.BRCA.sampleMap/HiSeqV2.gz"
+    rppa: "TCGA.BRCA.sampleMap/RPPA_RBN.gz"
+    cnv: "TCGA.BRCA.sampleMap/Gistic2_CopyNumber_Gistic2_all_data_by_genes.gz"
+    clinical: "TCGA.BRCA.sampleMap/BRCA_clinicalMatrix"
+  label_column: "PAM50Call_RNAseq"
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+
+qc:
+  max_missing_frac: 0.20     # drop features with more than 20 percent missing
+  min_variance: 1.0e-6       # near-constant threshold (after missingness filter)
+  min_class_size: 15         # warn if a PAM50 class is smaller than this
+
+features:
+  rna_var_top: 2000
+  rna_anova_top: 500
+  rppa_anova_top: null       # null means keep all proteins
+  cnv_anova_top: 300
+
+split:
+  test_size: 0.20
+  cv_folds: 5
